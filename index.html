@@ -16,9 +16,12 @@
         !function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);
         </script>
         <script type="text/javascript">
-            for (let i = 0; i < document.body.getElementsByClassName("w-webflow-badge").length; i++) {
-                document.body.getElementsByClassName("w-webflow-badge")[i].remove();
-            }
+            const interval = setInterval(function() {
+                for (let i = 0; i < document.body.getElementsByClassName("w-webflow-badge").length; i++) {
+                    document.body.getElementsByClassName("w-webflow-badge")[i].remove();
+                }
+            }, 5000);
+            clearInterval(interval);
         </script>
         <link href="https://uploads-ssl.webflow.com/62a257838b505638f81eef27/62a2930ecb06f207e2ec7baa_img32.jpeg" rel="shortcut icon" type="image/x-icon"/>
         <link href="https://uploads-ssl.webflow.com/62a257838b505638f81eef27/62a29310cb06f2620eec7bb3_img256.jpeg" rel="apple-touch-icon"/></head>
